@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'carro.css' %}">
+    <link rel="stylesheet" href="{% static 'cliente.css' %}">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script src="{% static 'cliente.js' %}"></script>
+
+{% endblock %}
+
+
+{% block 'dashboard' %}
+
+
+
+<div class="procura">
+  <form method="GET" id="search-form">
+  <input type="text" id="search" name="search" placeholder="Pesquisar" value="{{request.GET.search}}">
+    <i class='bx bx-search' ></i> 
+  </form>
+</div>
+
+<div class="addCar">
+
+<div class="col-md card-dashboard">
+  <a href="{% url 'carro-create' %}" class="text-card"> Adicionar Carro </a>
+</div>
+
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Placa</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Ano</th>
+        <th scope="col">Cor</th>
+      </tr>
+    </thead>
+    <tbody>
+{% for carro in object_list %}
+      <tr>
+        <th scope="row"> <a href="{% url 'carro-detail' carro.pk %}"> {{carro.placa}} </a></th>
+        <td>{{carro.marca}}</td>
+        <td>{{carro.modelo}}</td>
+        <td>{{carro.ano}}</td>
+        <td>{{carro.cor}}</td>
+        <td> <a class="btn-crud" href="{% url 'carro-update' carro.pk %}"><i class='bx bx-edit' ></i> Edit </a></td>
+        <td> <a class="btn-crud" href="{% url 'carro-delete' carro.pk %}"> Delete </a></td>      
+    </tr>
+{% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

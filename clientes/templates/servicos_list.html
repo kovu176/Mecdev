@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head' %}
+<link rel="stylesheet" href="{% static 'carro.css' %}">
+<link rel="stylesheet" href="{% static 'cliente.css' %}">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<script src="{% static 'cliente.js' %}"></script>
+{% endblock %}
+
+
+{% block 'dashboard' %}
+
+
+
+<div class="procura">
+    <form method="GET" id="search-form">
+    <input type="text" id="search" name="search" placeholder="Pesquisar" value="{{request.GET.search}}">
+      <i class='bx bx-search' ></i> 
+    </form>
+  </div>
+  
+  <div class="addCar">
+  
+  <div class="col-md card-dashboard">
+    <a href="{% url 'servicos-create' %}" class="text-card"> Adicionar Serviços </a>
+  </div>
+  
+  </div>
+  
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Cliente</th>
+          <th scope="col">Carro</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Descrição</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+  {% for servicos in object_list %}
+        <tr>
+          <th scope="row"><a href="{% url 'servicos-detail' servicos.pk %}"> {{servicos.cliente}} </a></th>
+          <td>{{servicos.servCar}}</td>
+          <td>{{servicos.tipo}}</td>
+  
+          <td> {{servicos.descricao}}   </td>
+  
+          <td> <a class="btn-crud" href="{% url 'servicos-update' servicos.pk %}"><i class='bx bx-edit' ></i> Edit </a></td>
+          <td> <a class="btn-crud" href="{% url 'servicos-delete' servicos.pk %}"> Delete </a></td>      
+      </tr>
+  {% endfor %}
+      </tbody>
+    </table>
+  
+
+   
+
+  
+
+
+
+
+{% endblock %}

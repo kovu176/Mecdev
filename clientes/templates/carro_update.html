@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block 'dashboard' %}
+    <form method="POST">
+        {% csrf_token %}
+
+        <h1> Marca </h1>
+        {{form.marca}}
+        <h1>Modelo</h1>
+        {{form.modelo}}
+        <h1>Placa</h1>
+        {{form.placa}}
+        <h1>Ano</h1>
+        {{form.ano}}
+        <h1>Cor</h1>
+        {{form.cor}}
+
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+
+{% endblock %}

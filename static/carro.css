@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+.procura {
+    margin-top: 15px!important;
+    background: #7267EF;
+    width: 400px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    margin: 0 auto;
+    transition: .9s;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.1 );
+}
+
+.procura input::placeholder {
+    color: #fff;
+}
+
+.procura:hover input {
+    width: 350px;
+
+}
+
+.procura input {
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 1em;
+    transition: .9s;
+    text-align: center;
+    
+
+}
+
+.procura i{
+    margin-top: 5px;
+    color: #fff
+}
+
+
+.addCar {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.addCar a{
+    color: #fff;
+    text-decoration: none!important;
+}
+
+.addCar a:hover{
+    color: #fff ;
+}
+
+
+
+.table a {
+    color: #7267EF;
+    text-decoration: none;
+    font-size: 16px; 
+
+}
+.table a:hover {
+    color: #7267EF;
+    text-decoration: none; 
+    
+}
+
+.table th {
+    color: #000 ;
+    font-weight: 600;
+}
+
+
+
+.table td {
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+.table thead th {
+    width: 220px;
+    
+}
+
