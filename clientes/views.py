@@ -42,8 +42,9 @@ class LandingQueryView(generic.ListView):
         qs = {
             'services_geral': Servicos.objects.all().distinct(), #evitar print repetido
             'clientes_geral': Clientes.objects.all().distinct(),
-            'carros_geral': Carro.objects.all().distinct() 
-        }
+            'carros_geral': Carro.objects.all().distinct(), 
+        } 
+        return qs
 
 class SignupView(generic.CreateView):
     template_name = 'signup.html'

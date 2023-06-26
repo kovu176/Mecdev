@@ -36,8 +36,8 @@
 
         <div class="card-item">
             <h1>Serviços </h1>
-
             <div class="flex-wrapper">
+              
                 <div class="single-chart">
                   <svg viewBox="0 0 36 36" class="circular-chart blue">
                     <path class="circle-bg"
@@ -51,8 +51,18 @@
                         a 15.9155 15.9155 0 0 1 0 31.831
                         a 15.9155 15.9155 0 0 1 0 -31.831"
                     />
-                    <text x="18" y="20.35" class="percentage">240</text>
+                    <text x="18" y="20.35" class="percentage">
+                      {% for aux in object_list.services_geral  %}
+                        {% if forloop.last %}
+                          {{forloop.counter}}
+                        {% endif  %}
+                      {% endfor %}
+
+                    </text>
+                    
                   </svg>
+                  
+
                 </div>
             </div>
             <div class="btn">
@@ -79,7 +89,12 @@
                         a 15.9155 15.9155 0 0 1 0 31.831
                         a 15.9155 15.9155 0 0 1 0 -31.831"
                     />
-                    <text x="18" y="20.35" class="percentage">250</text>
+                    <text x="18" y="20.35" class="percentage">
+                      {% for aux in object_list.clientes_geral  %}
+                        {% if forloop.last %}
+                          {{forloop.counter}}
+                        {% endif  %}
+                      {% endfor %}</text>
                   </svg>
                 </div>
             </div>
@@ -107,7 +122,13 @@
                         a 15.9155 15.9155 0 0 1 0 31.831
                         a 15.9155 15.9155 0 0 1 0 -31.831"
                     />
-                    <text x="18" y="20.35" class="percentage">1000</text>
+                    <text x="18" y="20.35" class="percentage">
+                    {% for aux in object_list.carros_geral  %}
+                      {% if forloop.last %}
+                        {{forloop.counter}}
+                      {% endif  %}
+                    {% endfor %}
+                    </text>
                   </svg>
                 </div>
             </div>

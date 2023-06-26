@@ -5,10 +5,10 @@ from django.contrib.auth.views import (
     LoginView,
     LogoutView,
 )
-from clientes.views import LandingView, SignupView
+from clientes.views import LandingView, SignupView, LandingQueryView
 
 urlpatterns = [
-    path('', LandingView.as_view(), name='landing'),
+    path('', LandingQueryView.as_view(), name='landing'),
     path('admin/', admin.site.urls),
     path('clientes/', include('clientes.urls')),
     path('login/', LoginView.as_view(), name='login'),
