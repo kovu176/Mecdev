@@ -66,6 +66,7 @@ class Servicos(models.Model):
         ('Troca de Pneu', 'Troca de Pneu'),
         ('Outro', 'Outro')
 )
+   
     tipo = models.CharField(choices=SERVICO_CHOICES, max_length=55)
     descricao = models.CharField(max_length=80)
     cliente = models.ForeignKey('Clientes', related_name='service_cliente', null=True, blank=True, default=None, on_delete=models.CASCADE)

@@ -8,8 +8,18 @@
 }
 
 
+.main {
+   background: #292943;
+}
+
+.alan {
+    width: 100%;
+    height: 20px;
+    background: #292943;
+}
+
 .procura {
-    margin-top: 15px!important;
+    
     background: #7267EF;
     width: 400px;
     height: 30px;
@@ -19,6 +29,7 @@
     transition: .9s;
     box-shadow: 0 0 25px 0 rgba(0,0,0,0.1 );
 }
+
 
 .procura input::placeholder {
     color: #fff;
@@ -67,10 +78,22 @@
     color: #fff ;
 }
 
+.table thead th {
+    width: 220px;
+   
+}
 
+
+
+
+
+.table tr {
+    border:2px solid  #292943;
+    
+}
 
 .table a {
-    color: #7267EF;
+    color: #9295a4;
     text-decoration: none;
     font-size: 16px; 
 
@@ -82,8 +105,10 @@
 }
 
 .table th {
-    color: #000 ;
-    font-weight: 600;
+    color: #fff ;
+    font-weight: 500;
+    border: 2px solid #292943;
+    
 }
 
 
@@ -91,10 +116,11 @@
 .table td {
     font-weight: 400;
     font-size: 16px;
+    color: #fff;
+    border: 2px solid #292943;
     
-}
-.table thead th {
-    width: 220px;
+    
+ 
     
 }
 

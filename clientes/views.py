@@ -12,6 +12,8 @@ from .forms import CarroModelForm, CustomUserCreationForm, ClientesModelForm, Se
 
 
 
+
+
 def user_Login(request):
     if request.method == "POST":
         username = request.POST["username"]
@@ -32,6 +34,16 @@ def user_Login(request):
 
 class LandingView(generic.TemplateView):
     template_name = 'landing.html'
+    
+class LandingQueryView(generic.ListView):
+    template_name = 'landing.html'
+
+    def get_queryset(self):
+        qs = {
+            'services_geral': Servicos.objects.all().distinct(), #evitar print repetido
+            'clientes_geral': Clientes.objects.all().distinct(),
+            'carros_geral': Carro.objects.all().distinct() 
+        }
 
 class SignupView(generic.CreateView):
     template_name = 'signup.html'
@@ -47,6 +59,7 @@ class SignupView(generic.CreateView):
     
 class ClienteListView (generic.ListView):
     template_name = 'clientes.html'
+   
     
     def get_queryset(self):
         search = self.request.GET.get('search')
@@ -184,6 +197,8 @@ class CarroDetailView (generic.DetailView):
 class ServicosListView (generic.ListView):
     template_name = 'servicos_list.html'
     
+    
+   
     def get_queryset(self):
         search = self.request.GET.get('search')
         if search:
@@ -236,6 +251,8 @@ class ServicosDeleteView (generic.DeleteView):
     
 class ServicosDetailView (generic.DetailView):
     template_name = 'servicos_detail.html'
+    
+  
     
     def get_queryset(self):
         return Servicos.objects.filter()

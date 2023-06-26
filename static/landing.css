@@ -14,6 +14,7 @@
     padding: 20px 10%;
     background: transparent;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
@@ -26,6 +27,11 @@
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+
+}
+
+.logo:hover{
+    color: #fff;
 
 }
 
@@ -53,17 +59,41 @@
 
 }
 
-.home-section {
 
-background-image: url("/static/meclogin.jpg");
-background-repeat: no-repeat;
-background-size:cover;
-
-       
-}
 
 .procura {
     background: transparent !important;
     
 }
 
+
+
+.card {
+    
+    width: 100%;
+    height: 600px;
+    background: #1b1c31;
+    margin-top: 70px;
+    
+
+}
+
+.card-content {
+    display: flex;
+    margin: 10px;
+}
+
+.card-item {
+    display: block;
+    width: 310px;
+    height: 350px;
+    
+    justify-content: center;
+    margin: 40px auto;
+    align-items: center;
+}
+
+.card-item h1 {
+    text-align: center;
+    color:#fff
+}

@@ -4,7 +4,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
+  
 }
+
+
+
 .sidebar{
   position: fixed;
   left: 0;
@@ -221,17 +225,23 @@
   width: 50px;
   background: none;
 }
+
+
+
 .home-section{
   position: relative;
   min-height: 100vh;
-  top: 0;
-  background: #FFFAED;
+  background: #292943;
   left: 78px;
-  color: white;
+  color: black;
   width: calc(100% - 78px);
   transition: all 0.5s ease;
   z-index: 2;
+ 
 }
+
+
+
 .sidebar.open ~ .home-section{
   left: 250px;
   width: calc(100% - 250px);
