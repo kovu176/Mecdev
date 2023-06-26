@@ -44,7 +44,6 @@
 
 .navbar a {
     font-size: 18px;
-    color: blue;
     text-decoration: none;
     font-weight: 500;
     margin-left: 30px;
@@ -53,16 +52,11 @@
 
 }
 
-.navbar a:hover,
-.navbar a.active {
-    color: #000;
-
-}
 
 
 
 .procura {
-    background: transparent !important;
+    background: #1b1c31 !important;
     
 }
 
