@@ -45,6 +45,26 @@ class LandingQueryView(generic.ListView):
             'carros_geral': Carro.objects.all().distinct(), 
         } 
         return qs
+    def get_context_data(self, **kwargs):
+        data = super(LandingQueryView, self).get_context_data(**kwargs)
+        valorPendente = 0
+        valorAndamento = 0
+        valorConcluido = 0
+        for aux in Servicos.objects.all():
+            if aux.status == 'Pendente':
+                valorPendente = valorPendente+1
+            if aux.status == 'Em Andamento':
+                valorAndamento = valorAndamento+1
+            if aux.status == 'Concluido':
+                valorConcluido = valorConcluido+1
+        data['valorPendente'] = valorPendente
+        data['valorAndamento'] = valorAndamento
+        data['valorConcluido'] = valorConcluido                
+
+        
+        
+        
+        return data
 
 class SignupView(generic.CreateView):
     template_name = 'signup.html'
@@ -226,7 +246,7 @@ class ServicosCreateView (generic.CreateView):
     #SERVICO UPDATE 
     
 class ServicosUpdateView(generic.UpdateView):
-    template_name = 'clientes_update.html'
+    template_name = 'servicos_update.html'
     form_class = ServicosModelForm
     def get_queryset(self):
         return Servicos.objects.filter()

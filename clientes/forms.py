@@ -36,7 +36,8 @@ class ServicosModelForm(forms.ModelForm):
             'tipo',
             'descricao',
             'cliente',
-            'servCar'
+            'servCar',
+            'status'
         )
         
 

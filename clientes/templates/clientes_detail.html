@@ -1,19 +1,64 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'form.css' %}">
+<link rel="stylesheet" href="{% static 'carro.css' %}">
+
+
+
+{% endblock %}
 
 {% block 'dashboard' %}
 
-<h1> Nome: </h1>
-{{cliente.nome}}
+<div class="alan">
+  
+</div>
 
-<h1> Sobrenome :</h1>
-{{cliente.sobrenome}}
+<div class="title"> 
+    <h1>Detalhes Cliente</h1>
 
-<h1> CPF :</h1>
-{{cliente.cpf}}
+</div>
 
-<h1> Carros :</h1>
-{{cliente.carro}}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2> Nome </h2>
+                    <span class="text"> {{clientes.nome}} 
+                </div>
+                <div class="col-md-4">
+                    <h2>Sobrenome</h2>
+                    <span class="text">  {{clientes.sobrenome}} </span>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>CPF</h2>
+                    <span class="text"> {{clientes.cpf}} </span>
 
 
+                </div>
+                <div class="col-md-4">
+                    <h2>Carro</h2>
+                    <span class="text">{% for carro in clientes.carro.all %}
+                          {{carro}}
+                        {% endfor %} </span>
+                </div>
+
+            </div>
+           
+            
+
+        </div>
+
+      
+    </form>
 
 {% endblock %}

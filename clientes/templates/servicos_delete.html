@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block 'head' %}
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'form.css' %}">
+<link rel="stylesheet" href="{% static 'carro.css' %}">
+
+
+
+{% endblock %}
+
+
+
+
+{% block 'dashboard' %}
+
+<div class="alan">
+  
+</div>
+
+<div class="title"> 
+    <h1>Deletar Serviço</h1>
+
+</div>
+
+
+    
+<form method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2> Tem certeza que deseja excluir o Serviço? </h2>
+                
+            </div>
+     
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" id="cadastrar">Deletar</button>
+            </div>
+        </div>
+           
+    </div>
+
+  
+</form>
+
+
+
+
+
+
+{% endblock %}

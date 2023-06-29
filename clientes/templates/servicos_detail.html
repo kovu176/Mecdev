@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'form.css' %}">
+<link rel="stylesheet" href="{% static 'carro.css' %}">
+
+
+
+{% endblock %}
+
+{% block 'dashboard' %}
+
+<div class="alan">
+  
+</div>
+
+<div class="title"> 
+    <h1>Detalhes Serviço</h1>
+
+</div>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2> Cliente </h2>
+                    <span class="text"> {{servicos.cliente}} </span> 
+                </div>
+                <div class="col-md-4">
+                    <h2>Carro</h2>
+                    <span class="text">  {{servicos.servCar}} </span>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Tipo</h2>
+                    <span class="text"> {{servicos.tipo}} </span>
+
+
+                </div>
+                <div class="col-md-4">
+                    <h2>Descrição</h2>
+                    <span class="text">  {{servicos.descricao}} </span>
+                </div>
+                <div class="col-md-4">
+                    <h2>Status</h2>
+                    <span class="text"> {{servicos.status}} </span>
+                </div>
+
+            </div>
+           
+            
+
+        </div>
+
+      
+    </form>
+
+{% endblock %}

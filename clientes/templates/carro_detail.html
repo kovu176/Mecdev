@@ -1,20 +1,62 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'form.css' %}">
+<link rel="stylesheet" href="{% static 'carro.css' %}">
+
+
+
+{% endblock %}
 
 {% block 'dashboard' %}
 
-<h1> A marca é: </h1>
-{{carro.marca}}
+<div class="alan">
+  
+</div>
 
-<h1> O modelo é :</h1>
-{{carro.modelo}}
+<div class="title"> 
+    <h1>Detalhes Carro</h1>
 
-<h1> O ano é :</h1>
-{{carro.ano}}
+</div>
 
-<h1> A cor é :</h1>
-{{carro.cor}}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2> Marca </h2>
+                    <span class="text"> {{carro.marca}} </span> 
+                </div>
+                <div class="col-md-4">
+                    <h2>Modelo</h2>
+                    <span class="text">  {{carro.modelo}} </span>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Ano</h2>
+                    <span class="text"> {{carro.ano}} </span>
 
-<h1> Autor:</h1>
-{{carro.func}}
+
+                </div>
+                <div class="col-md-4">
+                    <h2>Cor</h2>
+                    <span class="text">  {{carro.cor}} </span>
+                </div>
+
+            </div>
+           
+            
+
+        </div>
+
+      
+    </form>
 
 {% endblock %}

@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none!important;
+    font-family: 'Poppins';
 }
 
 .header {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -19,10 +22,13 @@
     align-items: center;
     z-index: 100;
     
+   
+    
+    
 }
 
 .logo {
-    margin-top: 20px;
+    margin-top: 0px;
     font-size: 25px;
     color: #fff;
     text-decoration: none;
@@ -60,108 +66,97 @@
     
 }
 
-
-
-.card {
-    
-    width: 100%;
-    height: 600px;
-    background: #1b1c31;
-    margin-top: 70px;
-    border-radius: 16px;
-    
-
+.container {
+  margin-top: 50px;
+  background: #1b1c31;
+  border-radius: 18px;
 }
 
-.card-content {
-    display: flex;
-    margin: 10px;
+.col-lg-4{
+  padding: 50px;
 }
 
-.card-item {
-    display: block;
-    width: 310px;
-    height: 350px;
-    justify-content: center;
-    margin: 40px auto;
-    align-items: center;
-}
-
-.card-item h1 {
-    text-align: center;
-    color:#9295a4
+.col-lg-4 h1{
+  text-align: center;
+  color: #9295a4;
+  
 }
 
 .btn{
-    display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex!important;
 
 }
 
 .btnHome{
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: #7267EF;
-    display: block;
-    margin: 0 15px;
-    font-weight: 500;
-    padding: 8px 18px;
-    transition: 0.2s;
-    border-radius: 30px;
-    border: 2px solid #7267EF;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #7267EF;
+  display: block;
+  margin: 0 15px;
+  font-weight: 500;
+  padding: 8px 18px;
+  transition: 0.2s;
+  border-radius: 30px;
+  border: 2px solid #7267EF;
+  transition: .3s;
 
-    
+  
 }
 
 .btnHome:hover{
-    color: #7267EF;
+  color: #9295a4;
+  background: #7267EF;
 }
 
 
 .flex-wrapper {
-    display: flex;
-    flex-flow: row nowrap;
-  }
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.single-chart {
+  width: 100%;
+  justify-content: space-around ;
   
-  .single-chart {
-    width: 100%;
-    justify-content: space-around ;
-    
+}
+
+.circular-chart {
+  display: block;
+  margin: 50px auto;
+  max-width: 100%;
+  max-height: 230px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #1b1c31;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
   }
+}
+
+.circular-chart.blue .circle {
+  stroke: #292943;
   
-  .circular-chart {
-    display: block;
-    margin: 50px auto;
-    max-width: 100%;
-    max-height: 230px;
-  }
+}
+
+.percentage {
+  fill: #9295a4;
+  font-size: 0.5em;
+  text-anchor: middle;
   
-  .circle-bg {
-    fill: none;
-    stroke: #1b1c31;
-    stroke-width: 3.8;
-  }
-  
-  .circle {
-    fill: none;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-    animation: progress 1s ease-out forwards;
-  }
-  
-  @keyframes progress {
-    0% {
-      stroke-dasharray: 0 100;
-    }
-  }
-  
-  .circular-chart.blue .circle {
-    stroke: #292943;
-    
-  }
-  
-  .percentage {
-    fill: #9295a4;
-    font-size: 0.5em;
-    text-anchor: middle;
-    
-  }
+}

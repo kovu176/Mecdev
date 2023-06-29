@@ -1,10 +1,58 @@
 {% extends 'base.html' %}
+
+{% load static %}
+
+{% block 'head' %}
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'form.css' %}">
+<link rel="stylesheet" href="{% static 'carro.css' %}">
+
+
+
+{% endblock %}
+
+
+
+
 {% block 'dashboard' %}
-<hr />
-<h1> Tem certeza que deseja deletar?</h1>
-<form method="post" action="">
+
+<div class="alan">
+  
+</div>
+
+<div class="title"> 
+    <h1>Deletar Carro</h1>
+
+</div>
+
+
+    
+<form method="POST">
     {% csrf_token %}
-    {{ form }}
-    <button class="w-full bg-blue-500 hover:bg-blue-600 px-3 py-1 rounded-md" type="submit"> Submit </button>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2> Tem certeza que deseja excluir o Carro? </h2>
+                
+            </div>
+     
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" id="cadastrar">Deletar</button>
+            </div>
+        </div>
+           
+    </div>
+
+  
 </form>
+
+
+
+
+
+
 {% endblock %}

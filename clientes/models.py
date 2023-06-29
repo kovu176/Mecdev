@@ -66,8 +66,13 @@ class Servicos(models.Model):
         ('Troca de Pneu', 'Troca de Pneu'),
         ('Outro', 'Outro')
 )
-   
+    STATUS_CHOICES = (
+        ('Pendente', 'Pendente'),
+        ('Em Andamento', 'Em Andamento'),
+        ('Concluido', 'Concluido')
+    )
     tipo = models.CharField(choices=SERVICO_CHOICES, max_length=55)
+    status = models.CharField(choices=STATUS_CHOICES, max_length=55, default='Pendente')
     descricao = models.CharField(max_length=80)
     cliente = models.ForeignKey('Clientes', related_name='service_cliente', null=True, blank=True, default=None, on_delete=models.CASCADE)
     servCar = models.ForeignKey('Carro', related_name='serv_car', null=True, blank=True, default=None, on_delete=models.CASCADE)

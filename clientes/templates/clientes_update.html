@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block 'head' %}
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'form.css' %}">
+<link rel="stylesheet" href="{% static 'carro.css' %}">
+
+
+
+{% endblock %}
+
+
+
+
+{% block 'dashboard' %}
+
+<div class="alan">
+  
+</div>
+
+<div class="title"> 
+    <h1>Editar Cliente</h1>
+
+</div>
+
+
+    
+<form method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2> Nome </h2>
+                {{form.nome}}
+            </div>
+            <div class="col-md-4">
+                <h2>Sobrenome</h2>
+                {{form.sobrenome}}
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>CPF</h2>
+                {{form.cpf}}
+
+
+            </div>
+            <div class="col-md-4">
+                <h2>Carro</h2>
+                {{form.carro}}
+            </div>
+            
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" id="cadastrar">Editar</button>
+            </div>
+        </div>
+           
+        
+
+        
+       
+        
+        
+       
+        
+
+    </div>
+
+  
+</form>
+
+
+
+
+
+
+{% endblock %}

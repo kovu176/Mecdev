@@ -13,6 +13,9 @@
 
 {% block 'dashboard' %}
 
+<div class="alan">
+  
+</div>
 
 
 <div class="procura">
@@ -37,6 +40,7 @@
           <th scope="col">Carro</th>
           <th scope="col">Tipo</th>
           <th scope="col">Descrição</th>
+          <th scope="col">Status</th>
           
         </tr>
       </thead>
@@ -48,6 +52,7 @@
           <td>{{servicos.tipo}}</td>
   
           <td> {{servicos.descricao}}   </td>
+          <td> {{servicos.status}}   </td>
   
           <td> <a class="btn-crud" href="{% url 'servicos-update' servicos.pk %}"><i class='bx bx-edit' ></i> Edit </a></td>
           <td> <a class="btn-crud" href="{% url 'servicos-delete' servicos.pk %}"> Delete </a></td>      
