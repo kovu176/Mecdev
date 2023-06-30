@@ -58,19 +58,30 @@
     align-items: center;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
 #cadastrar {
     text-decoration: none;
     font-size: 1.2rem;
     color: #7267EF;
-    display: block;
     margin: 0 15px;
     font-weight: 500;
     padding: 8px 18px;
-    transition: 0.2s;
+    transition: .2s;
     border-radius: 30px;
     border: 2px solid #7267EF;
-    transition: .3s;
     background: transparent;
+    justify-content: center;
+    align-items: center;
+   
+   
+   
 }
 
 #cadastrar:hover {

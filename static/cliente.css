@@ -1,6 +1,6 @@
 .card-dashboard{
 
-    background-color: #1b1c31;
+    background-color: var(--background-color);
     width: 50%;
     margin-top: 40px;
     text-align: center;

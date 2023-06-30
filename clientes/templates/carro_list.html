@@ -14,26 +14,33 @@
 
 {% block 'dashboard' %}
 
+<div class="alan">
+  
+</div>
+
 <section class="main">
 
- <div class="alan">
-  
- </div>
+  <div class="procura">
+    <form method="GET" id="search-form">
+      <input type="text" id="search" name="search" placeholder="Pesquisar" value="{{request.GET.search}}">
+        <i class='bx bx-search' ></i> 
+    </form>
+     
 
+  </div>
 
-<div class="procura">
-  <form method="GET" id="search-form">
-  <input type="text" id="search" name="search" placeholder="Pesquisar" value="{{request.GET.search}}">
-    <i class='bx bx-search' ></i> 
-  </form>
 </div>
 
-<div class="addCar">
 
-<div class="col-md card-dashboard">
-  <a href="{% url 'carro-create' %}" class="text-card"> Adicionar Carro </a>
-</div>
 
+<div class="container">
+  <div class="addCar">
+
+    <div class="col-md card-dashboard">
+      <a href="{% url 'carro-create' %}" class="text-card"> Adicionar Carro </a>
+    </div>
+
+  </div>
 </div>
 
 <table class="table">

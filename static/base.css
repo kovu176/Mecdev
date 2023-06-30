@@ -1,3 +1,15 @@
+:root{
+  --background-color: #292943;
+  --main-color: #7267EF ;
+  --dark-color: #1b1c31;
+  --text-color: #fff;
+  
+}
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -6,6 +18,9 @@
   font-family: "Poppins" , sans-serif;
   
 }
+
+
+
 
 
 
@@ -231,7 +246,7 @@
 .home-section{
   position: relative;
   min-height: 100vh;
-  background: #292943;
+  background: var(--background-color);
   left: 78px;
   color: black;
   width: calc(100% - 78px);
@@ -240,6 +255,7 @@
   
  
 }
+
 
 
 
@@ -258,4 +274,56 @@
   .sidebar li .tooltip{
     display: none;
   }
+}
+
+
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 54px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bx-moon {
+  color: #f1c40f!important;
+  font-size: 22px;
+
+}
+
+.bx-sun {
+  color: #f39c12!important;
+  font-size: 22px;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+.darkmode {
+  margin-left: 80%;
+  position: fixed;
+  
 }

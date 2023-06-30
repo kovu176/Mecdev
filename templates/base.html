@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     
-    <link rel="stylesheet" href="{% static 'general2.css'  %}">
     <link rel="stylesheet" href="{% static 'base.css'  %}">
+    
     
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     {% block 'head' %}{% endblock %}
@@ -17,6 +17,7 @@
     <title>{% block 'title' %}{% endblock %}</title>
   </head>
   <body>
+    
   {% block 'body' %}
     {% if request.user.is_authenticated %}
     <div class="sidebar">
@@ -87,13 +88,16 @@
       </div>
       
       <section class="home-section">
+        
+        
           {% block 'dashboard'%}
           {% endblock %}
           
       </section>
+    
       
     
-   
+    <script src="{% static 'lightmode.js' %}"></script>
     <script src="{% static 'base.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>

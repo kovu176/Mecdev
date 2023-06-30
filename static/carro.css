@@ -8,19 +8,16 @@
 }
 
 
-.main {
-   background: #292943;
-}
-
 .alan {
     width: 100%;
     height: 20px;
-    background: #292943;
+  
 }
+
 
 .procura {
     
-    background: #1b1c31;
+    background: var(--main-color);
     width: 400px;
     height: 30px;
     border-radius: 30px;
@@ -59,25 +56,34 @@
     color: #fff
 }
 
+.text-card{
+    border: 2px solid var(--main-color);
+    padding: 15px;
+    color: var(--main-color);
+    text-decoration: none!important;
+    border-radius: 16px;
+}
+
+
 
 .addCar {
     display: flex;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+   
     
     
     
 }
 
-.addCar a{
-    color: #fff;
-    text-decoration: none!important;
-    
+
+.text-card:hover{
+    color: var(--main-color) ;
 }
 
-.addCar a:hover{
-    color: #fff ;
+.table{
+    margin-top: 1.2rem;
 }
 
 .table thead th {
@@ -90,7 +96,7 @@
 
 
 .table tr {
-    border:2px solid  #292943;
+    border:2px solid  var(--background-color);
     
 }
 
@@ -101,7 +107,7 @@
 
 }
 .table a:hover {
-    color: #7267EF;
+    color: var(--main-color);
     text-decoration: none; 
     
 }
@@ -109,7 +115,7 @@
 .table th {
     color: #fff ;
     font-weight: 500;
-    border: 2px solid #292943;
+    
     
 }
 
@@ -119,7 +125,7 @@
     font-weight: 400;
     font-size: 16px;
     color: #fff;
-    border: 2px solid #292943;
+   
     
     
  
@@ -129,6 +135,6 @@
 .circle{
     margin-top: 40px;
     border-radius: 10%;
-    border: 2px solid #292943;
+    
 }
 
