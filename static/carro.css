@@ -71,8 +71,20 @@
     padding: 15px;
     color: var(--main-color);
     text-decoration: none!important;
-    border-radius: 16px;
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--main-color);
+    transition: .4s;
+   
 }
+
+.text-card:hover{
+    color: #EEEEEE;
+    background: var(--main-color);
+  }
+
+
 
 .main {
     margin: 0 auto;
