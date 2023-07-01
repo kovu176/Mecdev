@@ -10,24 +10,17 @@
 
 .text-card{
 
-    font-size: 25px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--main-color);
+    transition: .4s;
+   
 
 }
 
-.btn-add-carros{
+.text-card:hover{
+    color: #EEEEEE;
+    background: var(--main-color);
+  }
 
-    background-color: var(--contrast-color);
-    padding: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #9295a4;
 
-}
-
-.btn-principal{
-    color:#9295a4;
-    border: none;
-    background-color: var(--dark-color);
-    padding: 5px;
-    font-size: 30px;
-}

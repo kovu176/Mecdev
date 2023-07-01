@@ -17,17 +17,35 @@
   
 </div>
 
+<div class="main">
 
-<div class="procura">
+  <div class="procura">
     <form method="GET" id="search-form">
-    <input type="text" id="search" name="search" placeholder="Pesquisar" value="{{request.GET.search}}">
-      <i class='bx bx-search' ></i> 
+      <input type="text" id="search" name="search" placeholder="Pesquisar" value="{{request.GET.search}}">
+        <i class='bx bx-search' ></i> 
     </form>
   </div>
+
+  <div>
+    <input type="checkbox" class="checkbox" id="checkbox">
+    <label for="checkbox" class="checkbox-label">
+      <i class="bx bx-sun"></i>
+      <i class="bx bx-moon"></i>
+      <span class="ball"></span>
+    </label>
+  </div>
+
   
+
+</div>
+
+
+
+
+
   <div class="addCar">
   
-  <div class="col-md card-dashboard">
+  <div class="col-lg-12">
     <a href="{% url 'servicos-create' %}" class="text-card"> Adicionar Serviços </a>
   </div>
   
@@ -40,7 +58,7 @@
           <th scope="col">Carro</th>
           <th scope="col">Tipo</th>
           <th scope="col">Descrição</th>
-          <th scope="col">Status</th>
+          <th scope="col" class="cor-th">Status</th>
           
         </tr>
       </thead>

@@ -14,17 +14,27 @@
   
 }
 
+.col-lg-12{
+
+  
+    width: 50%;
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+
 
 .procura {
-    
+    margin-left: 25%;
     background: var(--main-color);
     width: 400px;
     height: 30px;
     border-radius: 30px;
-    display: flex;
-    margin: 0 auto;
-    transition: .9s;
-    box-shadow: 0 0 25px 0 rgba(0,0,0,0.1 );
+    transition: .7s;
+    
+    
 }
 
 
@@ -45,7 +55,7 @@
     width: 0px;
     font-weight: 500;
     font-size: 1em;
-    transition: .9s;
+    transition: .6s;
     text-align: center;
     
 
@@ -64,6 +74,23 @@
     border-radius: 16px;
 }
 
+.main {
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    height: 35px;
+    
+    display: flex;
+}
+
+.checkbox {
+    
+    position:absolute!important;
+    
+    
+    
+}
+
 
 
 .addCar {
@@ -79,29 +106,41 @@
 
 
 .text-card:hover{
-    color: var(--main-color) ;
+    color: #EEEEEE ;
 }
 
 .table{
-    margin-top: 1.2rem;
-}
-
-.table thead th {
-    width: 220px;
-   
-}
-
-
-
-
-
-.table tr {
-    border:2px solid  var(--background-color);
+    margin-top: 2rem;
+    
+    
+    
     
 }
 
+
+
+.table thead th {
+    width: 220px;
+    background: var(--main-color);
+    color: var(--background-color);
+    border: none;
+    
+    
+   
+}
+
+.cor-th{
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+
+
+
+
 .table a {
-    color: #9295a4;
+    color: var(--main-color);
     text-decoration: none;
     font-size: 16px; 
 
@@ -113,8 +152,9 @@
 }
 
 .table th {
-    color: #fff ;
+    color: var(--text-color) ;
     font-weight: 500;
+   
     
     
 }
@@ -124,7 +164,8 @@
 .table td {
     font-weight: 400;
     font-size: 16px;
-    color: #fff;
+    color: var(--text-color);
+    border: none;
    
     
     

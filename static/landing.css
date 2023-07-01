@@ -18,7 +18,7 @@
     background: transparent;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     z-index: 100;
     
@@ -58,13 +58,53 @@
 
 }
 
+.checkbox{
+  position: absolute !important;;
+}
+
 
 
 
 .procura {
-    background: var(--main-color) !important;
+    
+    background: var(--main-color);
+    width: 400px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    margin: 0 auto;
+    transition: .7s;
     
 }
+
+.procura input::placeholder {
+  color: #fff;
+}
+
+.procura:hover input {
+  width: 350px;
+
+}
+
+.procura input {
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  font-weight: 500;
+  font-size: 1em;
+  transition: .9s;
+  text-align: center;
+  
+
+}
+
+.procura i{
+  margin-top: 5px;
+  color: #fff
+}
+
 
 .container {
   margin-top: 50px;
@@ -108,7 +148,7 @@
 }
 
 .btnHome:hover{
-  color: #e2e0fb;
+  color: #EEEEEE;
   background: var(--main-color);
 }
 
@@ -161,8 +201,6 @@
   text-anchor: middle;
   
 }
-
-
 
 
 
