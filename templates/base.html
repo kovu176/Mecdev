@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'base.css'  %}">
     
     
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     {% block 'head' %}{% endblock %}
 
@@ -54,13 +55,7 @@
           </a>
           <span class="tooltip">Serviços</span>
         </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-folder' ></i>
-            <span class="links_name">Agenda</span>
-          </a>
-          <span class="tooltip">Agenda</span>
-        </li>
+        
         <li>
           <a href="#">
             <i class='bx bx-cog bx-spin-hover' ></i>
@@ -69,11 +64,12 @@
           <span class="tooltip">HistóricdDDo</span>
           
         </li>
+        
         {% endif %}
         {% if request.user.is_authenticated %}
         <li>
           <a href="{% url 'logout' %}">
-            <i class='user' ></i>
+            <i class='bx bx-user' ></i>
             <span class="links_name">Log Out</span>
           </a>
           <span class="tooltip">Log Out</span>
@@ -87,7 +83,9 @@
         </ul>
       </div>
       
+      
       <section class="home-section">
+        
         
         
           {% block 'dashboard'%}
