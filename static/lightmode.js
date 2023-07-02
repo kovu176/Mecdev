@@ -1,6 +1,8 @@
 const inputContainer = document.querySelector('.checkbox')
 const rootElement = document.documentElement
 
+
+
 const darkTheme = {
   '--main-color': '#d0435a',
   '--background-color': '#0D0A17',
@@ -34,3 +36,4 @@ function changeTheme(theme){
 function changeProperty(property, value){
   rootElement.style.setProperty(property, value)
 }
+

@@ -15,8 +15,6 @@
 }
 
 .col-lg-12{
-
-  
     width: 50%;
     margin-top: 40px;
     text-align: center;
@@ -39,7 +37,9 @@
 
 
 .procura input::placeholder {
+    font-size: 1.6rem;
     color: #fff;
+    font-weight: 500;
 }
 
 .procura:hover input {
@@ -58,12 +58,16 @@
     transition: .6s;
     text-align: center;
     
+    
 
 }
 
 .procura i{
-    margin-top: 5px;
-    color: #fff
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-left: 6px;
+    margin-top: 8px;
+    color: #fff;
 }
 
 .text-card{
@@ -91,15 +95,11 @@
     justify-content: space-around;
     align-items: center;
     height: 35px;
-    
     display: flex;
 }
 
 .checkbox {
-    
     position:absolute!important;
-    
-    
     
 }
 
@@ -110,10 +110,6 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-   
-    
-    
-    
 }
 
 
@@ -124,18 +120,18 @@
 .table{
     margin-top: 2rem;
     
-    
-    
-    
 }
 
 
+.table tr{
+    border: 3px solid var(--background-color);
+}
 
 .table thead th {
     width: 220px;
     background: var(--main-color);
     color: var(--background-color);
-    border: none;
+    
     
     
    
@@ -177,12 +173,8 @@
     font-weight: 400;
     font-size: 16px;
     color: var(--text-color);
-    border: none;
+    
    
-    
-    
- 
-    
 }
 
 .circle{
