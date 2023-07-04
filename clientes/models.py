@@ -79,3 +79,6 @@ class Servicos(models.Model):
     
     def _str_(self):
         return f'{self.cliente} {self.servCar}'
+    
+    
+    
