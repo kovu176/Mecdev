@@ -1,6 +1,7 @@
 const inputContainer = document.querySelector('.checkbox')
 const rootElement = document.documentElement
 
+window.onload = getThemeFromLocalStorage
 
 
 const darkTheme = {
@@ -31,10 +32,21 @@ function changeTheme(theme){
   for (let prop in theme){
     changeProperty(prop, theme[prop])
   }
+  saveThemeToLocalStorage(theme)
+
 }
 
 function changeProperty(property, value){
   rootElement.style.setProperty(property, value)
 }
 
+function saveThemeToLocalStorage(theme){
+  localStorage.setItem('theme', JSON.stringify(theme)) // CONVERTE OBJETO EM JSON
+
+}
+
+function getThemeFromLocalStorage(){
+  const theme = JSON.parse(localStorage.getItem('theme') ) //CONVERTE JSON STRING EM OBJETO
+  changeTheme(theme)
+}
 
